@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\asus\\Desktop\\COS20007 Object Oriented Programming\\All lab\\Lab 5\\PassTask13\\PassTask13.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\asus\\Desktop\\COS20007 Object Oriented Programming\\All lab\\Lab 5\\PassTask13\\PassTask13.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\asus\\Desktop\\COS20007 Object Oriented Programming\\All lab\\Lab 5\\PassTask13\\PassTask13.csproj",
+        "projectName": "PassTask13",
+        "projectPath": "C:\\Users\\asus\\Desktop\\COS20007 Object Oriented Programming\\All lab\\Lab 5\\PassTask13\\PassTask13.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\asus\\Desktop\\COS20007 Object Oriented Programming\\All lab\\Lab 5\\PassTask13\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Net.Test.Sdk": {
+              "target": "Package",
+              "version": "[15.3.0, )"
+            },
+            "Nunit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "Nunit.console": {
+              "target": "Package",
+              "version": "[3.11.1, )"
+            },
+            "Nunit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.8.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
