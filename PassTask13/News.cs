@@ -9,6 +9,22 @@ namespace PassTask13
         Specific
     }
 
+    public enum Month
+    {
+        January,
+        February,
+        March,
+        April,
+        May,
+        June,
+        July,
+        August,
+        September,
+        October,
+        November,
+        December   
+    }
+    
     public class News
     {
         private string _title;
@@ -23,16 +39,15 @@ namespace PassTask13
             _month = month;
         }
 
-        public void SpecificContent(){
+        public NewsType Type{
+            get{return _newstype;}
+        }
+
+        public void OutputContent(){
             Console.WriteLine("Month: " + _month);
             Console.WriteLine("Title: " + _title);
             Console.WriteLine("News Type: " + _newstype);
             Console.WriteLine("Content: " + _content);
         }
-
-        public void GeneralContent(){
-            // can be combine to one function....
-        }
-
     }   
 }

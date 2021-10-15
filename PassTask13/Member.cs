@@ -9,7 +9,7 @@ namespace PassTask13
         private int _age;
         private List<Membership> _membership;
         private List<Membership> _renewalMembership;
-        private List<HobbyGroups> _hobbyGroups;
+        private List<Group> _enrolGroups;
         private string _password;
         private bool _access;
 
@@ -28,11 +28,10 @@ namespace PassTask13
             else
             {
                 _membership.Add(m);
-            }
-            
+            }   
         }
-
-        public void EditMembership(Membership m){
+        public void EditMembership(Membership m, Payment p){ //editMembership is for member to pay fees
+            m.MakePayment(p);
         }
         public void DeleteMembership(Membership m){
             if (m.MembershipStatus == Status.activate)
@@ -45,6 +44,32 @@ namespace PassTask13
             }
         }
 
+        public void JoinGroup(Member m, Group g){
+            g.AddMembers(m);
+        }
+        public void LeaveGroup(Member m , Group g){
+            g.RemoveMembers(m);
+        }
+
+        public void ViewGroupNews(Group g){
+            g.DisplayGroupNews();
+        }
+        public void ViewGeneralNews(Group g){
+            g.DisplayGeneralNews();
+        }
+        
+        public void ViewMonthlyEvents(Group g){
+            g.DislplayMonthlyEvents();
+        }
+
+        public void PostComment(Group g, MonthlyEvents e){
+            g.CommentInEvents(e); //the poost comment coding is in group class 
+        }
+
+        public void ViewComment(Group g, MonthlyEvents e){
+            g.CommentInEvents(e); // the view comment coding is in group class 
+        }
+
         public List<Membership> Membership{
             get{return _membership;}
         }
@@ -52,28 +77,6 @@ namespace PassTask13
         public List<Membership> RenewalMembership{
             get{return _renewalMembership;}
         } 
-
-        public void ViewGroupNews(List<HobbyGroups> g){
-            //still cannot control output certain group news
-            foreach (HobbyGroups x in _hobbyGroups)
-            {
-                x.CertainGroupNews();
-            }
-        }
-
-        public void ViewGeneralNews(){}
-        
-        public void ViewMonthlyEvents(){}
-
-        public void PostComment(MonthlyEvents e, Comment c){
-            e.AddComment(c);
-        }
-
-        public void ViewComment(MonthlyEvents e){
-            List<Comment> buffer;
-            buffer = e.Comments;
-            Console.WriteLine(buffer);
-        }
 
         public void AuthenticateAcess(){
             Console.WriteLine("Please input your password: ");

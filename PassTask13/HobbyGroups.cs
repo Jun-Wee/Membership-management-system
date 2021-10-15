@@ -3,35 +3,28 @@ using System.Collections.Generic;
 
 namespace PassTask13
 {
-    public enum Month
-    {
-        January,
-        February,
-        March,
-        April,
-        May,
-        June,
-        July,
-        August,
-        September,
-        October,
-        November,
-        December   
-    }
     public class HobbyGroups
     {
-        private string _name;
-        private Month _month;
-        private List<Member> _members; 
-        private List<News> _allnews;
-        private List<MonthlyEvents> _allevents;
+        private List<Group> _hobbyGroups;
+        private string _type;
 
-        public HobbyGroups(string name, Month month){
-            _name = name;
-            _month = month;
+        public HobbyGroups(string type){
+            _type = type;
+            _hobbyGroups = new List<Group>();
         }
 
-        public void CertainGroupNews(){}
-        public void CertainMonthEvents(){}
+        public void AddHobbyGroups(Group g){
+            _hobbyGroups.Add(g);
+        }
+
+        public void EditHobbyGroups(HobbyGroups g){
+            Console.WriteLine("Change the type of the Hobby Groups: ");
+            string buffer = Console.ReadLine();
+            g._type = buffer;
+        }
+
+        public void RemoveHobbyGroups(Group g){
+            _hobbyGroups.Remove(g);
+        }
     }
 }

@@ -6,47 +6,26 @@ namespace PassTask13
     public class Shop
     {
         private bool _access;
-        private List<HobbyGroups> _hobbygrp;
-        private List<Member> _member;
+        private List<Member> _shopMember;
 
         public Shop(){
-            
-            _hobbygrp = new List<HobbyGroups>();
-            _member = new List<Member>();
+            _shopMember = new List<Member>();
             _access = false;
 
         }
 
-        public void Addhobbygrp(HobbyGroups g){
-
-        } 
-
-        public void Edithobbygrp(HobbyGroups g){
-
+        public void AddShopMember(Member m){
+            _shopMember.Add(m);
         }
-        public void Deletehobbygrp(HobbyGroups g){
-
+        public void DeleteShopMember(Member m){
+            _shopMember.Remove(m);
         }
 
-        public void Addmember(Member m){
-
-        }
-        public void Editmember(Member m){
-            
-        }
-        public void Deletemember(Member m){
-            
+        public List<Member> ShopMember{
+            get{return _shopMember;}
         }
 
-        public List<HobbyGroups> Hobbygrp{
-            get{return _hobbygrp;}
-        }
-
-        public List<Member> Member{
-            get{return _member;}
-        }
-
-        public void Authnticateaccess(){
+        public void AuthnticateAccess(){
 
         }
     }
