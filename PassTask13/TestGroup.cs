@@ -73,7 +73,7 @@ namespace PassTask13
             //check comment output is the same
             foreach (Comment c in beach_event.Comments)
             {
-                Assert.AreEqual(c.Output(), "Title: Jun comment\nDate: 22/10/2021\nContent: It is fun!");
+                Assert.AreEqual(c.OutputComment(), "Title: Jun comment\nDate: 22/10/2021\nContent: It is fun!");
             }
 
         }

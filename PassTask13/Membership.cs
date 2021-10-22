@@ -59,5 +59,6 @@ namespace PassTask13
         public string MembershipName{
             get{return _name;}
         }
+
     }
 }

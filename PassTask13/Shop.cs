@@ -27,7 +27,6 @@ namespace PassTask13
         }
 
         public void AuthnticateAccess(){
-
         }
     }
 }

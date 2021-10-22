@@ -54,6 +54,21 @@ namespace PassTask13
             g.RemoveMembers(m);
         }
 
+        public void OutputMembership(){
+            Console.WriteLine("All Membership List: ");
+            foreach (Membership ms in _membership)
+            {
+                Console.WriteLine("Name: " + ms.MembershipName);
+                Console.WriteLine("Status: " + ms.MembershipStatus);
+            }
+            Console.WriteLine("Renwal Membership List: ");
+            foreach (Membership ms in _renewalMembership)
+            {
+                Console.WriteLine(ms.MembershipName);
+                Console.WriteLine(ms.MembershipStatus);
+            }
+        }
+
         public void ViewGroupNews(Group g){
             g.DisplayGroupNews();
         }

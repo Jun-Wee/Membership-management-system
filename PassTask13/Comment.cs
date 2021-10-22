@@ -15,7 +15,7 @@ namespace PassTask13
             _date = date;
         }
 
-        public string Output(){
+        public string OutputComment(){
             return ("Title: " + _title + "\nDate: " + _date + "\nContent: "+_content);
         }
     }

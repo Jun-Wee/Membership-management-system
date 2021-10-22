@@ -47,7 +47,7 @@ namespace PassTask13
             Console.WriteLine("Month: " + _month);
             Console.WriteLine("Title: " + _title);
             Console.WriteLine("News Type: " + _newstype);
-            Console.WriteLine("Content: " + _content);
+            Console.WriteLine("Content: " + _content + "\n");
         }
     }   
 }

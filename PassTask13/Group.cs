@@ -69,19 +69,33 @@ namespace PassTask13
                 Console.WriteLine("Below is all the comment on the events: ");
                 foreach (Comment c in e.Comments)
                 {
-                    c.Output(); //output the tile content and date of comment in commnet list
+                    c.OutputComment(); //output the tile content and date of comment in commnet list
                 }
             }
         }
 
         public void DisplayGroupNews(){
-            Console.WriteLine("Below is the Group News: \n" + _allGroupNews);
+            Console.WriteLine("Below is the Group News: ");
+            foreach (News n in _allGroupNews)
+            {
+                n.OutputContent();
+            }
         }
+
         public void DisplayGeneralNews(){
-            Console.WriteLine("Below is the General News: \n" + _allGeneralNews);
+            Console.WriteLine("Below is the General News: ");
+            foreach (News n in _allGeneralNews)
+            {
+                n.OutputContent();
+            }
         }
+
         public void DislplayMonthlyEvents(){
-            Console.WriteLine("Below is the General News: \n" + _allGeneralNews);
+            Console.WriteLine("Below is the Group Events: ");
+            foreach (MonthlyEvents e in _allEvents)
+            {
+                Console.WriteLine(e.Content + "\n");
+            }
         }
 
         public void AddMembers(Member m){
