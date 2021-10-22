@@ -12,6 +12,7 @@ namespace PassTask13
         public MonthlyEvents(string title, string content){
             _title = title;
             _content = content;
+            _comments = new List<Comment>();
         }
 
         public string Content{

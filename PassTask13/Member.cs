@@ -18,6 +18,9 @@ namespace PassTask13
             _age = age;
             _password = password;
             _access = false;
+            _membership = new List<Membership>();
+            _renewalMembership = new List<Membership>();
+            _enrolGroups = new List<Group>();
         }
 
         public void AddMembership(Membership m){

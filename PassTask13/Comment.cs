@@ -14,5 +14,9 @@ namespace PassTask13
             _content = content;
             _date = date;
         }
+
+        public string Output(){
+            return ("Title: " + _title + "\nDate: " + _date + "\nContent: "+_content);
+        }
     }
 }

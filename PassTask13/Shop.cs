@@ -6,6 +6,7 @@ namespace PassTask13
     public class Shop
     {
         private bool _access;
+        private HobbyGroups _hobbyGroups;
         private List<Member> _shopMember;
 
         public Shop(){

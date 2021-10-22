@@ -13,7 +13,12 @@ namespace PassTask13
 
         public Group(string name){
             _name = name;
+            _members = new List<Member>();
+            _allGeneralNews = new List<News>();
+            _allGroupNews = new List<News>();
+            _allEvents = new List<MonthlyEvents>();
         }
+        
         public void AddNews(News n){
             if (n.Type == NewsType.General)
             {
@@ -42,7 +47,7 @@ namespace PassTask13
             _allEvents.Remove(e);
         }
 
-        public void CommentInEvents(MonthlyEvents e){
+        public void CommentInEvents(MonthlyEvents e){   //cetain event in the group
             Console.WriteLine("Choose 1. Add comment on events \n Choose 2. View comment on events");
             int x = Convert.ToInt32(Console.ReadLine());
             if (x==1){
@@ -53,12 +58,19 @@ namespace PassTask13
                 Console.WriteLine("Content: ");
                 string content = Console.ReadLine();
 
-                Console.WriteLine("Datw: ");
+                Console.WriteLine("Date: ");
                 string date = Console.ReadLine();
 
                 Comment buffer = new Comment(title,content,date);
                 //add the comment object into comment list
                 e.AddComment(buffer);
+            }
+            else{
+                Console.WriteLine("Below is all the comment on the events: ");
+                foreach (Comment c in e.Comments)
+                {
+                    c.Output(); //output the tile content and date of comment in commnet list
+                }
             }
         }
 
@@ -80,6 +92,18 @@ namespace PassTask13
         }
         public List<Member> Members{
             get{return _members;}
+        }
+
+        public List<News> AllGeneralNews{
+            get{return _allGeneralNews;}
+        }
+
+        public List<News> AllGroupNews{
+            get{return _allGroupNews;}
+        }
+
+        public List<MonthlyEvents> AllEvents{
+            get{return _allEvents;}
         }
     }   
 }
